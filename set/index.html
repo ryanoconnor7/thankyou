@@ -1,0 +1,224 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css" />
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script> -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<!--Section: Live preview-->
+<section class="form-dark form-dark-main" >
+
+        <!--Form without header-->
+        <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg'); background-size: cover; ">
+            <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+    
+                <!--Header-->
+                <div style="font:Source Sans Pro" class="text-center">
+                    <h3 style="font:Source Sans Pro" class="white-text mb-5 mt-4 font-weight-bold"><strong>THANK</strong> <a class="white-text font-weight-bold you"><strong> YOU</strong></a></h3>
+                </div>
+    
+                <!--Body-->
+                <div class="form-group row">
+                        <label style="font:Source Sans Pro;line-height: 10px" for=" example-text-input" class="col-2 col-form-label white-text mb-5 mt-4 font-weight-bold">Name</label>
+                        <div class="col-10">
+                          <input class="form-control white-text" type="email" value="" id="name">
+                        </div>
+                      </div>
+                      <div style="padding-top:20px" class="form-group row">
+                        <label style="font:Source Sans Pro;line-height: 10px" for="white-text mb-5 mt-4 font-weight-bold example-search-input" class="white-text mb-5 mt-4 font-weight-bold col-2 col-form-label">First</label>
+                        <div class="col-10">
+                          <input class="form-control white-text" type="email" value="" id="one">
+                        </div>
+                      </div>
+                      <div style="padding-top:20px" class="form-group row">
+                        <label style="font:Source Sans Pro;line-height: 10px;" for="example-email-input" class="white-text mb-5 mt-4 font-weight-bold col-2 col-form-label">Second</label>
+                        <div class="col-10">
+                          <input class="form-control white-text" type="email" value="" id="two">
+                        </div>
+                      </div>
+
+                <!--Grid row-->
+                <div class="row d-flex align-items-center mb-4">
+    
+                    <!--Grid column-->
+                    <div style="padding-top:20px" class="text-center mb-3 col-md-12">
+                        <button style="border-radius:25px" type="button" class="btn btn-primary btn-rounded z-depth-1" id="myButton">Go</button>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+    
+    
+            </div>
+        </div>
+        <!--/Form without header-->
+    
+    </section>
+    <!--Section: Live preview-->
+                
+</body>
+
+<script>
+    $('#myButton').on('click', function () {
+        var first = true
+        var paramString = ""
+
+        var name = $('#name').val()
+        var one = $('#one').val()
+        var two = $('#two').val()
+
+        if (name) {
+            if (first) {
+                paramString += "?name="+name
+                first = false
+            } else {
+                paramString += "&name="+name
+
+            }
+        }
+        if (one) {
+            if (first) {
+                paramString += "?1="+one
+                first = false
+            } else {
+                paramString += "&1="+one
+
+            }
+        }
+        if (two) {
+            if (first) {
+                paramString += "?2="+two
+                first = false
+            } else {
+                paramString += "&2="+two
+
+            }
+        }
+
+        window.location.href = "https://ryanoconnor7.github.io/thankyou/"+paramString
+    })
+</script>
+<style>
+.form-dark-main {
+    width: 300px;
+  height: 580px;
+  padding: 20px;
+
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  box-shadow:0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font: "Source Sans Pro";
+  margin: -70px -70 0 -170px;
+}
+.form-dark .font-small {
+  font-size: 0.8rem; 
+  align-content: center;
+}
+
+.form-dark [type="radio"] + label,
+.form-dark [type="checkbox"] + label {
+  font-size: 0.8rem; }
+
+.form-dark [type="checkbox"] + label:before {
+  top: 2px;
+  width: 15px;
+  height: 15px; }
+
+.form-dark .md-form label {
+  color: #fff; }
+
+.form-dark input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  -webkit-box-shadow: 0 1px 0 0 #00C851;
+  box-shadow: 0 1px 0 0 #00C851; }
+
+.form-dark input[type=text]:focus:not([readonly]) + label {
+  color: #fff; }
+
+.form-dark input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  -webkit-box-shadow: 0 1px 0 0 #00C851;
+  box-shadow: 0 1px 0 0 #00C851; }
+
+.form-dark input[type=password]:focus:not([readonly]) + label {
+  color: #fff; }
+
+.form-dark input[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  z-index: 0;
+  border: 1.5px solid #fff;
+  border-radius: 1px;
+  margin-top: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+
+.form-dark input[type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: -3px;
+  width: 12px;
+  height: 22px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent #00c851 #00c851 transparent;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%; }
+        
+  
+  .you {
+      animation: colorchange 40s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {color: red;}
+      25%  {color: blue;}
+      50%  {color: orange;}
+      75%  {color: green;}
+      100% {color: red;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {color: red;}
+      25%  {color: blue;}
+      50%  {color: orange;}
+      75%  {color: green;}
+      100% {color: red;}   animation: colorchange 40s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {color: red;}
+      25%  {color: blue;}
+      50%  {color: orange;}
+      75%  {color: green;}
+      100% {color: red;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {color: red;}
+      25%  {color: blue;}
+      50%  {color: orange;}
+      75%  {color: green;}
+      100% {color: red;}
+    }
+</style>
