@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>04 Ready</title>
+  <title>A Message For You</title>
   
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -62,6 +62,37 @@
 <!--more-->
 
 <script>
+
+function setParams() {
+    var urlParams = new URLSearchParams(window.location.search);
+  let name = urlParams.get('name')
+  let one = urlParams.get('1')
+  let two = urlParams.get('2')
+
+  if (name == null) {
+  } else {
+            $('.letters-3').html(name + "!")
+
+  }
+  if (one == null) {
+  } else {
+            $('.letters-1').html(one)
+
+  }
+  if (two == null) {
+  } else {
+            $('.letters-2').html(two)
+
+  }
+    
+  
+
+  console.log(name)
+}
+
+
+setParams()
+
 var ml4 = {};
 ml4.opacityIn = [0,1];
 ml4.scaleIn = [0.2, 1];
