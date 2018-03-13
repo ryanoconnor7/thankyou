@@ -137,7 +137,7 @@ function setRandomColor() {
 }
 
 window.setInterval(function(){
-  setRandomColor()
+  // setRandomColor()
 }, 1000);
 
 </script>
@@ -156,6 +156,30 @@ window.setInterval(function(){
   right: 0;
   opacity: 0; 
 }
+
+body {
+      animation: colorchange 40s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: red;}
+      25%  {background: blue;}
+      50%  {background: orange;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: red;}
+      25%  {background: blue;}
+      50%  {background: orange;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
 </style>
 
 
