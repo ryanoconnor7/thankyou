@@ -24,19 +24,19 @@
                 <div class="form-group row">
                         <label style="font:Source Sans Pro;line-height: 10px" for=" example-text-input" class="col-2 col-form-label white-text mb-5 mt-4 font-weight-bold">Name</label>
                         <div class="col-10">
-                          <input class="form-control white-text" type="email" value="" id="name">
+                          <input class="form-control white-text" type="text" value="" id="name">
                         </div>
                       </div>
                       <div style="padding-top:20px" class="form-group row">
                         <label style="font:Source Sans Pro;line-height: 10px" for="white-text mb-5 mt-4 font-weight-bold example-search-input" class="white-text mb-5 mt-4 font-weight-bold col-2 col-form-label">First</label>
                         <div class="col-10">
-                          <input class="form-control white-text" type="email" value="" id="one">
+                          <input class="form-control white-text" type="text" value="" id="one">
                         </div>
                       </div>
                       <div style="padding-top:20px" class="form-group row">
                         <label style="font:Source Sans Pro;line-height: 10px;" for="example-email-input" class="white-text mb-5 mt-4 font-weight-bold col-2 col-form-label">Second</label>
                         <div class="col-10">
-                          <input class="form-control white-text" type="email" value="" id="two">
+                          <input class="form-control white-text" type="text" value="" id="two">
                         </div>
                       </div>
 
@@ -106,9 +106,9 @@
     width: 300px;
   height: 580px;
   padding: 20px;
-
+  transform: scale(2);
   position: absolute;
-  top: 15%;
+  top: 430px;
   left: 50%;
   box-shadow:0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font: "Source Sans Pro";
@@ -175,7 +175,8 @@
   -webkit-backface-visibility: hidden;
   -webkit-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%; }
+  transform-origin: 100% 100%; 
+  }
         
   
   .you {
@@ -199,9 +200,8 @@
       25%  {color: blue;}
       50%  {color: orange;}
       75%  {color: green;}
-      100% {color: red;}   animation: colorchange 40s infinite; /* animation-name followed by duration in seconds*/
-         /* you could also use milliseconds (ms) or something like 2.5s */
-      -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+      100% {color: red;}   
+      
     }
 
     @keyframes colorchange
