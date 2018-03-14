@@ -8,11 +8,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script>var ml = { timelines: {}};</script>
 
-  <audio controls autoplay>
+  <audio controls autoplay id="audio">
     <source src="Kahoot_Music.mp3" type="audio/mpeg">
 
-    </audio>
+    </audio> 
 
+    <script>
+    $('body').on('click', function() {
+      let audio = document.getElementById('audio')
+      audio.play()
+
+    })
+    </script>
 
   <style>
   body {
